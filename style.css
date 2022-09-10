@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: #111;
+  color: #f7f7f7;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.navbar {
+  height: 4rem;
+  background-color: rgba(34, 34, 34, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  margin-top: 2rem;
+  border-radius: 50px;
+  border: 2px solid #444;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s;
+  z-index: 99;
+}
+
+.navbar:hover {
+  border-color: rgba(72, 209, 205, 0.5);
+}
+
+.logo {
+  text-transform: lowercase;
+  transition: all 0.3s;
+}
+
+.logo:hover {
+  color: mediumturquoise;
+}
+
+a {
+  color: inherit;
+}
+
+.btn {
+  font-size: 1.2rem;
+  color: mediumturquoise;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  color: #f7f7f7;
+}
+
+.animes {
+  margin-top: 8rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  place-items: center;
+}
+
+.anime {
+  width: 300px;
+  height: 530px;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 2px solid #444;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+  position: relative;
+}
+
+.anime:hover {
+  border-color: rgba(72, 209, 205, 0.5);
+}
+
+.anime-poster {
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.anime-poster img {
+  width: 100%;
+}
+
+.rating {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(220, 20, 60, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.3rem 0.7rem;
+  border-radius: 0 0 20px 0;
+  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+}
+
+.anime-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 130px;
+  padding: 1rem;
+}
+
+.watch {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 998px) {
+  .animes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: 6rem;
+    padding: 1rem;
+  }
+
+  .animes {
+    grid-template-columns: 1fr;
+    margin-top: 10rem;
+  }
+}
